@@ -48,9 +48,7 @@ void splitString02(const char *buf1,char c,char buf[10][30],int *num)
 		}
 		else
 		{
-			
-			//步骤2
-			
+			//步骤2			
 			strncpy(buf[ncount],pTmp,p-pTmp);
 			buf[ncount][p-pTmp]='\0';
 			//步骤3
@@ -62,7 +60,7 @@ void splitString02(const char *buf1,char c,char buf[10][30],int *num)
 	*num=ncount;
 }
 
-void main()
+void main123()
 {
 	int i=0;
 	const char *buf1="abcdef,acccd,eeee,aaaa,e3eeeee,sssss,";
@@ -76,5 +74,20 @@ void main()
 		printf("%s\n", buf[i]);
 	}
 
+	system("pause");
+}
+
+void main()
+{
+	int a[5]={1,2,3,4,5};
+	int (*p)[5] = &a;
+	int *p1=&a;
+	int *p2=&a+1;
+
+	printf("%d--%d\n",p1,p1+1);
+
+	int i=0;
+	//printf("%d--%d\n",p,p+1);
+	//printf("%d--%d\n", p1,p1+1);
 	system("pause");
 }
